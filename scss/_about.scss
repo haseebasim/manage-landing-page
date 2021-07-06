@@ -1,17 +1,28 @@
 .about {
   text-align: center;
-  
-  h1 {
-    font-size: 1.8rem;
-    padding: 0 40px;
-    color: $primary-color-text;
-  }
+  div {
+    h1 {
+      font-size: 1.8rem;
+      padding: 0 40px;
+      color: $primary-color-text;
+    }
 
-  p {
-    text-justify: auto;
-    margin-top: 1rem;
-    padding: 0 35px;
-    color: $secondary-color-text;
+    p {
+      text-justify: auto;
+      margin-top: 1rem;
+      padding: 0 35px;
+      color: $secondary-color-text;
+      @include media(">tablet") {
+        padding-right: 40% !important;
+      }
+    }
+
+    @include media(">tablet") {
+      h1,
+      p {
+        padding: 0;
+      }
+    }
   }
 
   &-list {
@@ -32,6 +43,9 @@
         padding: 5px 0px 8px;
         font-size: 1rem;
         color: $primary-color-text;
+        @include media(">tablet") {
+          background-color: transparent;
+        }
         span {
           margin-right: 10px;
           padding: 5px 25px 8px;
@@ -45,8 +59,28 @@
         margin-top: 0.5rem;
         font-size: 0.9rem;
         padding-right: 20px;
+        color: $secondary-color-text;
         line-height: 1.8;
+        @include media(">tablet") {
+          padding-right: 0;
+          padding-left: 20%;
+        }
       }
     }
+    @include media(">tablet") {
+      margin-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  @include media(">tablet") {
+    display: grid;
+    width: 100%;
+    padding: 0 10vw;
+    // padding: 0;
+    grid-template-columns: auto auto;
+    align-items: flex-start;
+    column-gap: 15vw;
+    text-align: start;
   }
 }

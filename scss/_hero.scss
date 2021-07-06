@@ -1,33 +1,55 @@
 .header {
+  background-image: url(../images/bg-tablet-pattern.svg);
+  background-size: 27rem;
+  background-position: 60px -30%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  .hero {
     background-image: url(../images/bg-tablet-pattern.svg);
-    background-size: 27rem;
-    background-position: 60px -30%;
+    background-size: 18rem;
+    background-position: 230px 100%;
     background-repeat: no-repeat;
-    overflow: hidden;
-    .hero {
-      background-image: url(../images/bg-tablet-pattern.svg);
-      background-size: 18rem;
-      background-position: 230px 100%;
-      background-repeat: no-repeat;
-      padding: 0 20px 100px 20px;
-      text-align: center;
-      img {
-        width: 100%;
-      }
-  
+    padding: 0 20px 100px 20px;
+    text-align: center;
+
+    img {
+      width: 100%;
+    }
+
+    div {
       h1 {
         font-size: 2.4rem;
         line-height: 1.2;
         color: $primary-color-text;
       }
-  
+
       p {
         margin-top: 10px;
         padding: 0 5px;
         color: $secondary-color-text;
       }
-  
-    
+      @include media(">tablet") {
+        grid-area: 1/1;
+        text-align: start;
+        display: flex;
+        flex-flow: column;
+        row-gap: 15px;
+      }
+    }
+    @include media(">tablet") {
+      display: grid;
+      grid-template-columns: auto 50%;
+      align-items: center;
+      margin: 80px 10vw;
+      padding-left: 0;
+      padding-right: 0;
+      column-gap: 8vw;
+      height: max-content;
+      background-image: none;
     }
   }
-  
+  @include media(">tablet") {
+    background-size: 46rem;
+    background-position: 120% -250%;
+  }
+}

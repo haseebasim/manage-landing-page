@@ -5,7 +5,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   &-search {
+    display: flex;
     input {
       padding: 12px 25px;
       border: none;
@@ -15,11 +17,17 @@
 
     button {
       margin-left: 5px;
-      width: 80px;
+      width: 50px;
+      height: 100%;
       background-color: $primary-color;
       border: none;
       height: 100%;
       border-radius: 100px;
+      padding: 12px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
     }
   }
 
@@ -58,5 +66,35 @@
     margin-top: 50px;
     font-size: 0.7rem;
     color: $secondary-color-text;
+    @include media(">tablet") {
+      grid-area: 2/3;
+      padding-left: 10%;
+    }
+  }
+
+  @include media(">tablet") {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 100%;
+    justify-content: space-between;
+    padding: 50px 10vw;
+    align-items: flex-start;
+    .footer-logo {
+      grid-area: 1/1;
+    }
+
+    &-socials {
+      grid-area: 2/1;
+      img {
+        width: 1.2rem;
+      }
+    }
+
+    &-nav {
+      grid-area: 1/2;
+      margin: 0;
+      column-gap: 100px;
+      row-gap: 80px;
+    }
   }
 }

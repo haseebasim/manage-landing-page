@@ -5,13 +5,20 @@
   position: relative;
   margin: 40px 20px;
   height: 25px;
+
+  &-brand {
+    height: max-content;
+  }
+
   &-brand img {
     width: 6rem;
   }
 
   .toggler-btn img {
     width: 1.4rem;
-    @include setTransition;
+    @include media(">tablet") {
+      display: none;
+    }
   }
 
   &-container {
@@ -39,8 +46,25 @@
     &.open {
       transform: translateY(0);
     }
+    @include media(">=tablet") {
+      transform: translateY(0);
+      background-color: transparent;
+      flex-direction: row;
+      position: relative;
+      padding: 0 !important;
+      border-radius: 0;
+      margin: 0;
+      column-gap: 25px;
+      row-gap: 0;
+      width: max-content;
+    }
   }
 
+  .call-to-action {
+    margin: 0;
+  }
 
-  
+  @include media(">tablet"){
+    margin: 40px 10vw;
+  }
 }

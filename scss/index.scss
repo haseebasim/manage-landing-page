@@ -1,10 +1,11 @@
+@import "mediaquery";
 @import "config";
 @import "menu";
 @import "hero";
 @import "about";
 @import "testimonial";
 @import "banner";
-@import 'footer';
+@import "footer";
 body {
   background-color: white;
 }

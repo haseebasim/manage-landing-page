@@ -14,9 +14,20 @@
     color: white;
     line-height: 1.2;
     font-size: 2.5rem;
+    @include media(">tablet") {
+      padding-right: 40%;
+      text-align: start;
+    }
   }
   button {
     color: $primary-color;
     background-color: white;
+    width: 150px;
+  }
+
+  @include media(">tablet") {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10%;
   }
 }
