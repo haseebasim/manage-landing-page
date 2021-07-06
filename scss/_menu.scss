@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 40px 20px;
+  height: 25px;
+  &-brand img {
+    width: 6rem;
+  }
+
+  .toggler-btn img {
+    width: 1.4rem;
+    @include setTransition;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    list-style-type: none;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    margin-top: 50px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    width: 100%;
+    padding: 50px 0;
+    transform: translateY(-200%);
+    @include setTransition;
+    & li a {
+      text-decoration: none;
+      color: $primary-color-text;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    &.open {
+      transform: translateY(0);
+    }
+  }
+
+
+  
+}

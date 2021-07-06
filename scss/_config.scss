@@ -1,0 +1,19 @@
+//Primary
+$primary-color: hsl(12, 88%, 59%);
+$primary-color-text: hsl(228, 39%, 23%);
+//Neutrals
+$secondary-color-button: hsl(13, 100%, 96%);
+$secondary-color-nav: hsl(0, 0%, 98%);
+$secondary-color-text: hsl(227, 12%, 61%);
+$secondary-color-background: hsl(233, 12%, 13%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam", sans-serif;
+}
+
+@mixin setTransition {
+  transition: all 0.5s ease-out;
+}
