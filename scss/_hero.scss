@@ -5,10 +5,10 @@
   background-repeat: no-repeat;
   overflow: hidden;
   .hero {
-    background-image: url(../images/bg-tablet-pattern.svg);
-    background-size: 18rem;
-    background-position: 230px 100%;
-    background-repeat: no-repeat;
+    // background-image: url(../images/bg-tablet-pattern.svg);
+    // background-size: 18rem;
+    // background-position: 230px 100%;
+    // background-repeat: no-repeat;
     padding: 0 20px 100px 20px;
     text-align: center;
 
@@ -48,7 +48,8 @@
       background-image: none;
     }
   }
-  @include media(">tablet") {
+  @include media(">=tablet") {
+    background-image: none;
     background-size: 46rem;
     background-position: 120% -250%;
   }

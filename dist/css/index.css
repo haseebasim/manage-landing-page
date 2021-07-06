@@ -61,7 +61,7 @@
   transform: translateY(0);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .nav-container {
     transform: translateY(0);
     background-color: transparent;
@@ -77,7 +77,14 @@
 }
 
 .nav .call-to-action {
+  display: none;
   margin: 0;
+}
+
+@media (min-width: 769px) {
+  .nav .call-to-action {
+    display: block;
+  }
 }
 
 @media (min-width: 769px) {
@@ -95,10 +102,6 @@
 }
 
 .header .hero {
-  background-image: url(../images/bg-tablet-pattern.svg);
-  background-size: 18rem;
-  background-position: 230px 100%;
-  background-repeat: no-repeat;
   padding: 0 20px 100px 20px;
   text-align: center;
 }
@@ -143,8 +146,9 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header {
+    background-image: none;
     background-size: 46rem;
     background-position: 120% -250%;
   }

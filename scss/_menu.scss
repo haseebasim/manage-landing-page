@@ -46,7 +46,7 @@
     &.open {
       transform: translateY(0);
     }
-    @include media(">=tablet") {
+    @include media(">tablet") {
       transform: translateY(0);
       background-color: transparent;
       flex-direction: row;
@@ -61,10 +61,14 @@
   }
 
   .call-to-action {
+    display: none;
     margin: 0;
+    @include media(">tablet") {
+      display: block;
+    }
   }
 
-  @include media(">tablet"){
+  @include media(">tablet") {
     margin: 40px 10vw;
   }
 }
